@@ -111,6 +111,13 @@ Next, you will need to add a python script on the target machine using that mach
 
 Finally save the config files and verify these connections by running ansible webservers - m ping or ansible all -m ping (for all the webservers) 
 
-- Run the playbook, and navigate to kibana by run curl command to the kibana IP to check that the installation worked as expected.
+Run the playbooks:
+- ansible-playbook /etc/ansible/install-ELK.yml
+
+- ansible-playbook /etc/ansible/metricbeat-playbook.yml
+
+- ansible-playbook /etc/ansible/filebeat-playbook.yml
+- 
+Navigate to kibana by run curl command http://51.143.35.76:5601/app/kibana to the kibana IP to check that the installation worked as expected.
 
 ![diagram](Kibana_Home.png)
