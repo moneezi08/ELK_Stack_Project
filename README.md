@@ -113,3 +113,4 @@ Finally save the config files and verify these connections by running ansible we
 
 - Run the playbook, and navigate to kibana by run curl command to the kibana IP to check that the installation worked as expected.
 
+![diagram](Kibana_Home.png)
