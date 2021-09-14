@@ -100,11 +100,9 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the configuration and playbook files to /etc/ansible/ directory. 
-- Update the ansible and host file to include...
-- Run the playbook, and navigate to kibana by run curl command to the kibana IP to check that the installation worked as expected.
+- Update the ansible and host file to include the following: 
 
 Run ansible
-
 Now in order to let Ansible make connections to the Vm we must make two changes to the configuration files located in /etc/ansible/ directory. 
 - Ansible needs to know the Administrative user name to use when making SSH connections (Admin username used when created the Web-VMs); ansible.cfg is the file with the setting for the admin name that should be used 
 - Ansible needs to know the IP address of the VM you want it to connect to; hosts.cfg is the file with all of the IP addresses that should be used under the webservers group 
@@ -113,4 +111,5 @@ Next, you will need to add a python script on the target machine using that mach
 
 Finally save the config files and verify these connections by running ansible webservers - m ping or ansible all -m ping (for all the webservers) 
 
+- Run the playbook, and navigate to kibana by run curl command to the kibana IP to check that the installation worked as expected.
 
